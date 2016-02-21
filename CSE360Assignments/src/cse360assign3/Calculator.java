@@ -18,7 +18,7 @@ public class Calculator {
 	 *  here the variable total get initializes to size 0
 	 *  */
 	public Calculator () {
-		total = 0;  // not needed - included for clarity
+		total = 0;  
 	}
 	
 	/**This method return the value in the variable total. 
@@ -26,7 +26,7 @@ public class Calculator {
 	 * @return total 			the total of the calculation.
 	 * */
 	public int getTotal () {
-		return 0;
+		return total;
 	}
 	
 	/**This method add the given value to the private variable total. 
@@ -34,7 +34,7 @@ public class Calculator {
 	 * @param value 			the value to be added to the total.
 	 * */
 	public void add (int value) {
-		
+		total = total + value;
 	}
 	
 	/**This method subtract the given value from the private variable total. 
@@ -42,7 +42,7 @@ public class Calculator {
 	 * @param value 			the value to be subtract from the total.
 	 * */
 	public void subtract (int value) {
-		
+		total = total - value;
 	}
 	
 	/**This method multiply the given value to the private variable total. 
@@ -50,7 +50,7 @@ public class Calculator {
 	 * @param value 			the value to be multiplied to the total.
 	 * */
 	public void multiply (int value) {
-		
+		total = total * value;
 	}
 	
 	/**This method divide the given value by the private variable total. 
@@ -58,7 +58,10 @@ public class Calculator {
 	 * @param value 			the value to be divided by the total.
 	 * */
 	public void divide (int value) {
-		
+		if(value == 0)
+			total = 0;
+		else
+			total = total / value;
 	}
 	
 	/**This method return a history of all actions as a String. . 
