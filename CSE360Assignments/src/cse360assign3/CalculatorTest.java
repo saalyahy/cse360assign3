@@ -1,3 +1,11 @@
+/** Description of CalculatorTest
+ *  This class is a Tester for the calculator class to check its functionality.
+ *
+ * @author Salman Alyahya
+ * @pin 109
+ * @version Feb 22, 2016.
+ */
+
 package cse360assign3;
 
 import static org.junit.Assert.*;
@@ -20,9 +28,9 @@ public class CalculatorTest
 	{
 		//checking if getTotal will return the correct total.
 		Calculator cal = new Calculator();
-		assertEquals(0, cal .getTotal());
+		assertEquals(0, cal.getTotal());
 		cal.add(10);
-		assertEquals(10, cal .getTotal());
+		assertEquals(10, cal.getTotal());
 	}
 
 	@Test
@@ -31,10 +39,10 @@ public class CalculatorTest
 		//checking if add will add the correct value to the total.
 		Calculator cal = new Calculator();
 		cal.add(10);
-		assertEquals(10, cal .getTotal());
+		assertEquals(10, cal.getTotal());
 		cal.add(8);
 		cal.add(1);
-		assertEquals(19, cal .getTotal());
+		assertEquals(19, cal.getTotal());
 	}
 
 	@Test
@@ -43,10 +51,10 @@ public class CalculatorTest
 		//checking if Subtract will Subtract the correct value from the total.
 		Calculator cal = new Calculator();
 		cal.add(100);
-		assertEquals(100, cal .getTotal());
+		assertEquals(100, cal.getTotal());
 		cal.subtract(19);
 		cal.subtract(22);
-		assertEquals(59, cal .getTotal());
+		assertEquals(59, cal.getTotal());
 	}
 
 	@Test
@@ -55,11 +63,11 @@ public class CalculatorTest
 		//checking if Multiply will Multiply the total by the correct value.
 		Calculator cal = new Calculator();
 		cal.multiply(20);
-		assertEquals(0, cal .getTotal());
+		assertEquals(0, cal.getTotal());
 		cal.add(2);
 		cal.multiply(3);
 		cal.multiply(5);
-		assertEquals(30, cal .getTotal());
+		assertEquals(30, cal.getTotal());
 	}
 
 	@Test
@@ -68,12 +76,12 @@ public class CalculatorTest
 		//checking if Divide will Divide the total by the correct value, and that total will equal 0 if that value is 0.
 		Calculator cal = new Calculator();
 		cal.divide(5);
-		assertEquals(0, cal .getTotal());
+		assertEquals(0, cal.getTotal());
 		cal.add(20);
 		cal.divide(5);
-		assertEquals(4, cal .getTotal());
+		assertEquals(4, cal.getTotal());
 		cal.multiply(0);
-		assertEquals(0, cal .getTotal());
+		assertEquals(0, cal.getTotal());
 	}
 
 	@Test
@@ -86,7 +94,7 @@ public class CalculatorTest
 		cal.divide(2);
 		cal.add(8);
 		cal.multiply(7);
-		assertEquals("0 + 5 - 3 / 2 + 8 * 7", cal .getHistory());
+		assertEquals("0 + 5 - 3 / 2 + 8 * 7", cal.getHistory());
 	}
 
 }

@@ -1,5 +1,5 @@
-/** Description of OrderedIntList
- *  This class is c  calculator that add, subtract, multiply, or divide number, then return the answer if asked.
+/** Description of Calculator
+ *  This class is a calculator that add, subtract, multiply, or divide number, then return the answer if asked.
  *
  * @author Salman Alyahya
  * @pin 109
