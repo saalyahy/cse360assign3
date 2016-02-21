@@ -79,7 +79,14 @@ public class CalculatorTest
 	@Test
 	public void testGetHistory() 
 	{
-		fail("Not yet implemented");
+		//checking if getHistory will return the correct history of the calculations.
+		Calculator cal = new Calculator();
+		cal.add(5);
+		cal.subtract(3);
+		cal.divide(2);
+		cal.add(8);
+		cal.multiply(7);
+		assertEquals("0 + 5 - 3 / 2 + 8 * 7", cal .getHistory());
 	}
 
 }

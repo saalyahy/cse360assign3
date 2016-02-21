@@ -11,14 +11,17 @@ package cse360assign3;
 public class Calculator {
 	
 	/** total: is an integer variable that hold the total of the calculations.
+	 *  history: is a String to store the history of the calculation.
 	 *  */
 	private int total;
+	private String history;
 	
 	/** This is the constructor of the class Calculator.
 	 *  here the variable total get initializes to size 0
 	 *  */
 	public Calculator () {
 		total = 0;  
+		history = "0";
 	}
 	
 	/**This method return the value in the variable total. 
@@ -35,6 +38,7 @@ public class Calculator {
 	 * */
 	public void add (int value) {
 		total = total + value;
+		history = history + " + " + value;
 	}
 	
 	/**This method subtract the given value from the private variable total. 
@@ -43,6 +47,7 @@ public class Calculator {
 	 * */
 	public void subtract (int value) {
 		total = total - value;
+		history = history + " - " + value;
 	}
 	
 	/**This method multiply the given value to the private variable total. 
@@ -51,6 +56,7 @@ public class Calculator {
 	 * */
 	public void multiply (int value) {
 		total = total * value;
+		history = history + " * " + value;
 	}
 	
 	/**This method divide the given value by the private variable total. 
@@ -62,6 +68,7 @@ public class Calculator {
 			total = 0;
 		else
 			total = total / value;
+		history = history + " / " + value;
 	}
 	
 	/**This method return a history of all actions as a String. . 
@@ -69,6 +76,6 @@ public class Calculator {
 	 * @return 			the history of all actions done so far.
 	 * */
 	public String getHistory () {
-		return "";
+		return history;
 	}
 }
